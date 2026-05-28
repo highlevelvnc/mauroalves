@@ -11,7 +11,7 @@ export function Process() {
           </h2>
           <p className="mt-5 text-base leading-relaxed text-navy-700 sm:text-lg">
             Um processo simples e previsível. Cada mês fecha com balanço e
-            arranque do ciclo seguinte — sempre com base nos números reais das
+            arranque do ciclo seguinte, sempre com base nos números reais das
             campanhas.
           </p>
         </div>

@@ -20,10 +20,10 @@ export function CTA() {
             Próximo passo
           </span>
           <h2 className="mt-5 text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-            Vamos preparar o primeiro mês do {CLIENT.name}?
+            Vamos preparar o primeiro mês do {CLIENT.firstName}?
           </h2>
           <p className="mt-5 text-base leading-relaxed text-ink-100/80 sm:text-lg">
-            Escolhe o pacote, falamos numa breve reunião de alinhamento e em{" "}
+            Escolha o pacote, marcamos uma reunião curta de alinhamento e em{" "}
             {PROPOSAL.firstDeliveryBusinessDays} dias úteis temos os primeiros
             vídeos prontos e as campanhas no ar.
           </p>

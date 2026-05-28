@@ -10,9 +10,17 @@ export function Footer() {
             {AGENCY.name}
           </p>
           <p className="mt-2 text-sm leading-relaxed">
-            Vídeo, tráfego pago e marca pessoal para profissionais que vivem da
-            confiança dos seus clientes.
+            Vídeo, tráfego pago e marca pessoal para profissionais que vivem
+            da confiança dos seus clientes.
           </p>
+          <a
+            href={AGENCY.websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-block text-sm font-semibold text-gold-400 hover:text-gold-300"
+          >
+            {AGENCY.website}
+          </a>
         </div>
 
         <div>
@@ -30,9 +38,10 @@ export function Footer() {
           <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-ink-100/45">
             Contactos
           </p>
+          <p className="mt-2 text-sm text-ink-50">Vinicius Oliveira</p>
           <a
             href={`mailto:${AGENCY.email}`}
-            className="mt-2 block text-sm text-ink-50 hover:text-gold-400"
+            className="mt-1 block text-sm hover:text-gold-400"
           >
             {AGENCY.email}
           </a>
@@ -58,7 +67,7 @@ export function Footer() {
 
       <div className="container-wide mt-12 flex flex-col items-start justify-between gap-3 border-t border-ink-100/10 pt-6 text-xs text-ink-100/45 sm:flex-row sm:items-center">
         <span>© {year} {AGENCY.name}. Todos os direitos reservados.</span>
-        <span>Documento confidencial — destinado a {CLIENT.name}.</span>
+        <span>Documento confidencial. Destinado a {CLIENT.name}.</span>
       </div>
     </footer>
   );

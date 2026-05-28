@@ -25,10 +25,10 @@ export function Header() {
         <a
           href="#topo"
           className="flex items-center gap-3 text-navy-900"
-          aria-label={`${AGENCY.name} — proposta`}
+          aria-label={`${AGENCY.name} · proposta`}
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-navy-grad text-ink-50 font-display text-sm font-bold tracking-wider">
-            HV
+            HL
           </span>
           <span className="hidden text-sm font-semibold uppercase tracking-[0.2em] sm:inline">
             {AGENCY.name}

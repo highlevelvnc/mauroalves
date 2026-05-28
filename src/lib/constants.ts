@@ -1,21 +1,24 @@
 export const WHATSAPP_NUMBER = "351934071660";
 
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  "Olá Vasco! Vi a proposta para o Mauro Alves e gostaria de avançar.",
+  "Olá Vinicius! Vi a proposta para o Mauro Alves e gostaria de avançar.",
 )}`;
 
 export const CLIENT = {
   name: "Mauro Alves",
+  firstName: "Mauro",
   segment: "Imobiliária",
-  pitch: "Conteúdo audiovisual e tráfego pago para captar clientes e fortalecer a marca pessoal.",
+  pitch: "Conteúdo audiovisual e tráfego pago para captar clientes e consolidar a marca pessoal.",
 } as const;
 
 export const AGENCY = {
-  name: "highlevelvnc",
-  fullName: "highlevelvnc · Vasco Oliveira",
+  name: "High Level",
+  fullName: "High Level · Vinicius Oliveira",
   email: "vnc.oli@gmail.com",
   phone: "+351 934 071 660",
   region: "Portugal",
+  website: "highlevelmkt.com",
+  websiteUrl: "https://highlevelmkt.com",
 } as const;
 
 export const PROPOSAL = {
@@ -25,7 +28,7 @@ export const PROPOSAL = {
 } as const;
 
 export type Plan = {
-  id: "essencial" | "completo";
+  id: "start" | "crescer" | "acelerar" | "dominar";
   name: string;
   badge?: string;
   price: string;
@@ -34,74 +37,132 @@ export type Plan = {
   highlight: boolean;
   features: { label: string; detail?: string }[];
   ctaLabel: string;
+  bestFor: string;
 };
 
 export const PLANS: Plan[] = [
   {
-    id: "essencial",
-    name: "Pacote Essencial",
+    id: "start",
+    name: "Start",
+    price: "390€",
+    cadence: "/ mês",
+    tagline:
+      "Entrada estratégica para começar a aparecer com regularidade nas redes sociais.",
+    bestFor: "Para quem quer testar o método com cadência leve.",
+    highlight: false,
+    features: [
+      { label: "2 vídeos por mês", detail: "Curtos verticais para Reels, TikTok e Shorts." },
+      { label: "Roteiro, edição e legendas" },
+      { label: "Música licenciada" },
+      { label: "1 ronda de ajustes por vídeo" },
+      { label: "Relatório mensal de alcance" },
+    ],
+    ctaLabel: "Quero o Start",
+  },
+  {
+    id: "crescer",
+    name: "Crescer",
     price: "650€",
     cadence: "/ mês",
     tagline:
-      "4 vídeos por mês (com ou sem drone) + tráfego pago para amplificar os resultados.",
+      "Mais conteúdo, opção de drone e tráfego pago a amplificar tudo o que se publica.",
+    bestFor: "Para quem quer começar a gerar leads com consistência.",
     highlight: false,
     features: [
-      {
-        label: "4 vídeos premium por mês",
-        detail: "Reels verticais para Instagram, TikTok e YouTube Shorts.",
-      },
-      {
-        label: "Opção com ou sem drone",
-        detail: "Planos aéreos para destacar imóveis e localização.",
-      },
-      {
-        label: "Roteiro, edição e legendas",
-        detail: "Ritmo, música e CTAs pensados para conversão.",
-      },
-      {
-        label: "Tráfego pago incluído",
-        detail: "Campanhas Meta e Google segmentadas ao público-alvo certo.",
-      },
-      {
-        label: "Relatório mensal",
-        detail: "Alcance, engagement, leads e custo por contacto.",
-      },
+      { label: "Tudo o que está no Start" },
+      { label: "4 vídeos por mês", detail: "Com ou sem drone, conforme o conteúdo do mês." },
+      { label: "Tráfego pago em Meta e Google" },
+      { label: "Segmentação por zona, interesses e comportamento" },
+      { label: "Painel com métricas em tempo real" },
     ],
-    ctaLabel: "Quero o Pacote Essencial",
+    ctaLabel: "Quero o Crescer",
   },
   {
-    id: "completo",
-    name: "Pacote Completo",
+    id: "acelerar",
+    name: "Acelerar",
     badge: "Mais escolhido",
     price: "850€",
     cadence: "/ mês",
     tagline:
-      "Tudo o que precisa para crescer: vídeos, tráfego, social media, site e SEO num único parceiro.",
+      "Presença digital completa num único parceiro. Vídeo, social media, site e SEO em conjunto.",
+    bestFor: "Para quem quer presença digital consolidada em todos os canais.",
     highlight: true,
     features: [
-      { label: "Tudo o que está no Essencial" },
-      {
-        label: "Gestão de social media",
-        detail: "Calendário editorial, copy, publicações e stories semanais.",
-      },
-      {
-        label: "Integração com website",
-        detail: "Página de imóvel, formulário e pixel para retargeting.",
-      },
-      {
-        label: "SEO local",
-        detail: "Optimização para pesquisas como “casas em [zona]”.",
-      },
-      {
-        label: "Planeamento estratégico",
-        detail: "Reunião mensal de estratégia e roadmap trimestral.",
-      },
-      {
-        label: "Prioridade no atendimento",
-        detail: "Resposta em até 4h úteis e ajustes rápidos.",
-      },
+      { label: "Tudo o que está no Crescer" },
+      { label: "Gestão de social media", detail: "Calendário editorial, copy, publicações e stories." },
+      { label: "Integração com website", detail: "Página de imóvel, formulário, pixel para retargeting." },
+      { label: "SEO local", detail: "Optimização para pesquisas como “casas em [zona]”." },
+      { label: "Planeamento estratégico mensal" },
+      { label: "Prioridade no atendimento", detail: "Resposta em até 4h úteis." },
     ],
-    ctaLabel: "Quero o Pacote Completo",
+    ctaLabel: "Quero o Acelerar",
+  },
+  {
+    id: "dominar",
+    name: "Dominar",
+    badge: "Topo de gama",
+    price: "1.490€",
+    cadence: "/ mês",
+    tagline:
+      "Volume forte de produção, branded content mensal e estratégia avançada para liderar o mercado local.",
+    bestFor: "Para quem quer ser a referência da zona em poucos meses.",
+    highlight: false,
+    features: [
+      { label: "Tudo o que está no Acelerar" },
+      { label: "8 vídeos por mês", detail: "Drone incluído sempre que faça sentido." },
+      { label: "1 branded content por mês", detail: "Vídeo de marca pessoal entre 60 e 90 segundos." },
+      { label: "Email marketing", detail: "Newsletter mensal para a base de leads." },
+      { label: "Reunião quinzenal de estratégia" },
+      { label: "Atendimento dedicado", detail: "Resposta em até 2h úteis." },
+      { label: "Auditoria trimestral aprofundada" },
+    ],
+    ctaLabel: "Quero o Dominar",
+  },
+];
+
+export type Addon = {
+  title: string;
+  price: string;
+  cadence: string;
+  description: string;
+};
+
+export const ADDONS: Addon[] = [
+  {
+    title: "Vídeo extra",
+    price: "150€",
+    cadence: "por vídeo",
+    description: "Mais um vídeo no mês para alimentar uma campanha ou aproveitar um lançamento.",
+  },
+  {
+    title: "Drone adicional",
+    price: "50€",
+    cadence: "por vídeo",
+    description: "Planos aéreos extra em vídeos onde a vista do imóvel ou da zona faz diferença.",
+  },
+  {
+    title: "Tour virtual 360°",
+    price: "200€",
+    cadence: "por imóvel",
+    description: "Visita imersiva ao imóvel para quem não pode ir presencialmente.",
+  },
+  {
+    title: "Sessão fotográfica de imóvel",
+    price: "250€",
+    cadence: "por imóvel",
+    description: "Fotografia profissional para anúncios e portais imobiliários.",
+  },
+  {
+    title: "Vídeo de marca pessoal",
+    price: "1.490€",
+    cadence: "valor único",
+    description: "Vídeo manifesto entre 60 e 90 segundos para posicionar o Mauro no mercado.",
+  },
+  {
+    title: "Landing page de imóvel",
+    price: "300€",
+    cadence: "por imóvel",
+    description: "Página dedicada com galeria, vídeo, mapa e formulário ligado ao WhatsApp.",
   },
 ];
 
@@ -109,22 +170,22 @@ export const PILLARS = [
   {
     title: "Conteúdo que vende imóveis",
     body:
-      "Vídeo é o formato com maior retenção em imobiliária. Mostra espaço, luz e contexto melhor do que qualquer fotografia.",
+      "Vídeo é o formato com maior retenção em imobiliária. Mostra espaço, luz e contexto muito melhor do que qualquer fotografia.",
   },
   {
     title: "Tráfego que chega às pessoas certas",
     body:
-      "Campanhas segmentadas por localização, interesses e comportamento em Meta e Google para captar quem está mesmo a comprar ou a vender.",
+      "Campanhas segmentadas por zona, interesses e comportamento em Meta e Google para apanhar quem está mesmo na fase de comprar ou vender.",
   },
   {
     title: "Marca pessoal forte",
     body:
-      "O Mauro torna-se a primeira escolha quando alguém pensa em comprar, vender ou arrendar.",
+      "O Mauro fica na cabeça do cliente como primeira escolha quando este pensa em comprar, vender ou arrendar na sua zona.",
   },
   {
     title: "Acompanhamento em tempo real",
     body:
-      "Ajustes contínuos com base em métricas reais — não trabalhamos no escuro.",
+      "Ajustes contínuos com base nas métricas reais das campanhas. Não andamos a trabalhar no escuro.",
   },
 ];
 
@@ -132,27 +193,27 @@ export const TRAFFIC_BLOCKS = [
   {
     title: "Google e YouTube Ads",
     body:
-      "Captação de quem pesquisa activamente por imóveis e por consultores na sua zona, mais retargeting em YouTube.",
+      "Captação de quem pesquisa activamente por imóveis e por consultores na zona do Mauro, com retargeting forte em YouTube.",
     bullets: [
-      "Search por intenção (“comprar casa em…”, “vender apartamento…”).",
-      "Anúncios em vídeo no YouTube em formato curto e in-stream.",
-      "Retargeting de quem visitou o site ou viu mais de 50% de um reel.",
+      "Pesquisa por intenção, tipo “comprar casa em Setúbal” ou “vender apartamento Lisboa”.",
+      "Vídeo no YouTube em formato curto e in-stream.",
+      "Retargeting para quem visitou o site ou viu mais de metade de um reel.",
     ],
   },
   {
     title: "Meta Ads (Facebook e Instagram)",
     body:
-      "Reels patrocinados, campanhas de mensagens directas para WhatsApp e formulários de captação.",
+      "Reels patrocinados, campanhas de mensagens directas para o WhatsApp e formulários de captação.",
     bullets: [
       "Segmentação por zona, idade, rendimento estimado e interesses.",
-      "Lookalike de quem já contactou para captar perfis semelhantes.",
-      "Campanhas de marca pessoal para reforçar autoridade do Mauro.",
+      "Lookalikes a partir de quem já contactou, para apanhar perfis semelhantes.",
+      "Campanhas de marca pessoal para reforçar a autoridade do Mauro no mercado local.",
     ],
   },
   {
     title: "Acompanhamento e optimização",
     body:
-      "Não basta pôr a correr. Lemos os dados todas as semanas e ajustamos onde é preciso.",
+      "Pôr campanhas a correr é metade do trabalho. A outra metade é ler os dados todas as semanas e ajustar onde faz falta.",
     bullets: [
       "Painel partilhado com métricas em tempo real.",
       "Ajuste semanal de criativos, públicos e investimento.",
@@ -170,12 +231,12 @@ export const EXAMPLES = [
   {
     url: "https://www.instagram.com/reel/DWQti_-jQGn/?igsh=ZnNsOGY5NzRzaWNq",
     label: "Reel · cliente real",
-    description: "Marca pessoal: o consultor como protagonista, próximo do cliente.",
+    description: "Marca pessoal do consultor como protagonista, próximo do cliente.",
   },
   {
     url: "https://www.instagram.com/reel/DTxwwJ4gobX/?igsh=d3RvOGE2cXI5bHV5",
     label: "Reel · cliente real",
-    description: "Tour de imóvel com planos aéreos e foco na luz natural.",
+    description: "Tour de imóvel com planos aéreos a destacar a luz natural.",
   },
   {
     url: "https://www.instagram.com/reel/DVbxH9pDUmf/?igsh=NzY5cmZzdzhud3dr",
@@ -188,12 +249,12 @@ export const PROCESS_STEPS = [
   {
     title: "Briefing e estratégia",
     body:
-      "Reunião inicial para perceber objectivos, público e portefólio. Saímos com plano de conteúdos para o mês.",
+      "Reunião inicial para mapear objectivos, público e portefólio. Sai daqui o plano de conteúdos do mês.",
   },
   {
     title: "Pré-produção",
     body:
-      "Guiões dos 4 vídeos, planos de filmagem, lista de equipamentos (incluindo drone, se aplicável).",
+      "Guiões de cada vídeo, planos de filmagem e lista de equipamentos, drone incluído sempre que faz sentido.",
   },
   {
     title: "Filmagem",
@@ -203,12 +264,12 @@ export const PROCESS_STEPS = [
   {
     title: "Edição e revisão",
     body:
-      "Montagem, color grading, legendas e música. 1 ronda de ajustes incluída por vídeo.",
+      "Montagem, color grading, legendas e música. Cada vídeo tem 1 ronda de ajustes incluída.",
   },
   {
     title: "Publicação e tráfego pago",
     body:
-      "Publicação coordenada nas plataformas e arranque das campanhas Meta e Google.",
+      "Publicação coordenada nos canais do Mauro e arranque das campanhas Meta e Google.",
   },
   {
     title: "Análise e ajuste",
@@ -220,6 +281,7 @@ export const PROCESS_STEPS = [
 export const NAV_LINKS = [
   { href: "#porque", label: "Porquê" },
   { href: "#planos", label: "Planos" },
+  { href: "#extras", label: "Extras" },
   { href: "#trafego", label: "Tráfego" },
   { href: "#exemplos", label: "Exemplos" },
   { href: "#processo", label: "Processo" },

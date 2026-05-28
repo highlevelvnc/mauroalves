@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Pillars } from "@/components/Pillars";
 import { Plans } from "@/components/Plans";
+import { Addons } from "@/components/Addons";
 import { Traffic } from "@/components/Traffic";
 import { Examples } from "@/components/Examples";
 import { Process } from "@/components/Process";
@@ -16,6 +17,7 @@ export default function Page() {
         <Hero />
         <Pillars />
         <Plans />
+        <Addons />
         <Traffic />
         <Examples />
         <Process />

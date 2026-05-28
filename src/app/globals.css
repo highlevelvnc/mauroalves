@@ -66,7 +66,7 @@
   }
 }
 
-/* Reveal pattern — visible-by-default, hidden only when marked at runtime */
+/* Reveal pattern: visible-by-default, hidden only when marked at runtime */
 [data-revealed="false"] {
   opacity: 0;
   transform: translate3d(0, 28px, 0);

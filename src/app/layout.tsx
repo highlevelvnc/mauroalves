@@ -18,10 +18,10 @@ const body = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mauroalves-proposta.vercel.app"),
-  title: `Proposta · ${CLIENT.name} — ${AGENCY.name}`,
+  metadataBase: new URL(AGENCY.websiteUrl),
+  title: `Proposta · ${CLIENT.name} · ${AGENCY.name}`,
   description:
-    "Conteúdo audiovisual premium e tráfego pago para a marca pessoal e os imóveis do Mauro Alves.",
+    "Conteúdo audiovisual e tráfego pago para a marca pessoal e os imóveis do Mauro Alves.",
   openGraph: {
     title: `Proposta · ${CLIENT.name}`,
     description:

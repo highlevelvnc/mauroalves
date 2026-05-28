@@ -34,9 +34,9 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-100/85">
-            Uma proposta clara, com dois caminhos possíveis para reforçar a marca
-            pessoal, captar clientes e tirar partido do digital — sem ter de
-            gerir várias agências em paralelo.
+            Quatro pacotes pensados para crescer ao ritmo certo, com vídeo,
+            social media e tráfego pago num único parceiro. Sem ter de gerir
+            várias agências em paralelo.
           </p>
 
           <div
@@ -44,10 +44,7 @@ export function Hero() {
             data-reveal
             data-reveal-delay="150ms"
           >
-            <a
-              href="#planos"
-              className="btn-gold"
-            >
+            <a href="#planos" className="btn-gold">
               Ver os planos
             </a>
             <a
@@ -56,7 +53,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="btn-ghost border-ink-100/30 bg-ink-50/5 text-ink-50 hover:bg-ink-50/10"
             >
-              Falar com {AGENCY.name.split(" ")[0]}
+              Falar comigo no WhatsApp
             </a>
           </div>
 

@@ -18,13 +18,13 @@ export function Traffic() {
             </h2>
             <p className="mt-5 text-base leading-relaxed text-navy-700 sm:text-lg">
               Em paralelo com a produção, lançamos campanhas pagas no Google,
-              YouTube, Facebook e Instagram com segmentação detalhada — por
+              YouTube, Facebook e Instagram com segmentação detalhada por
               localização, interesses, comportamento e dados demográficos.
             </p>
             <p className="mt-4 text-base leading-relaxed text-navy-700 sm:text-lg">
-              O objectivo é simples: o conteúdo da sua marca pessoal chega às
-              pessoas certas no momento certo, com optimização contínua e
-              relatórios claros.
+              O objectivo é claro. Pôr o conteúdo da marca pessoal do Mauro à
+              frente das pessoas certas no momento certo, com optimização
+              contínua e relatórios sem letra miúda.
             </p>
           </div>
 

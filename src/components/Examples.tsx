@@ -87,7 +87,7 @@ export function Examples() {
                   Reel
                 </div>
                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-50/85">
-                  <span>0:00 — 0:30</span>
+                  <span>0:00 · 0:30</span>
                   <span>9:16</span>
                 </div>
               </div>
