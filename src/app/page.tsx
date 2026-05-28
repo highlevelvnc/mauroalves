@@ -1,6 +1,8 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { Marquee } from "@/components/Marquee";
 import { Pillars } from "@/components/Pillars";
+import { Stats } from "@/components/Stats";
 import { Plans } from "@/components/Plans";
 import { Addons } from "@/components/Addons";
 import { Traffic } from "@/components/Traffic";
@@ -15,7 +17,9 @@ export default function Page() {
       <Header />
       <main>
         <Hero />
+        <Marquee />
         <Pillars />
+        <Stats />
         <Plans />
         <Addons />
         <Traffic />

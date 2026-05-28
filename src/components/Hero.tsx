@@ -1,17 +1,63 @@
 import { CLIENT, AGENCY, PROPOSAL, WHATSAPP_URL } from "@/lib/constants";
 
+function Stamp() {
+  return (
+    <div className="pointer-events-none absolute right-6 top-6 hidden h-32 w-32 items-center justify-center lg:flex">
+      <svg
+        viewBox="0 0 200 200"
+        className="stamp h-full w-full text-gold-400"
+        aria-hidden
+      >
+        <defs>
+          <path
+            id="stamp-path"
+            d="M 100, 100 m -76, 0 a 76,76 0 1,1 152,0 a 76,76 0 1,1 -152,0"
+          />
+        </defs>
+        <circle
+          cx="100"
+          cy="100"
+          r="92"
+          fill="none"
+          stroke="currentColor"
+          strokeOpacity="0.35"
+          strokeDasharray="2 6"
+        />
+        <text
+          fill="currentColor"
+          fontSize="11"
+          letterSpacing="5"
+          fontFamily="var(--font-display)"
+          fontWeight="700"
+        >
+          <textPath href="#stamp-path">
+            PROPOSTA PERSONALIZADA · MAURO ALVES · {PROPOSAL.issuedAt.toUpperCase()} ·
+          </textPath>
+        </text>
+      </svg>
+      <span className="absolute inline-flex h-12 w-12 items-center justify-center rounded-full border border-gold-400/40 bg-navy-900/70 backdrop-blur">
+        <span className="font-display text-lg font-bold text-gold-400">HL</span>
+      </span>
+    </div>
+  );
+}
+
 export function Hero() {
   return (
     <section
       id="topo"
       className="relative isolate overflow-hidden bg-navy-grad text-ink-50"
     >
+      <span aria-hidden className="hero-orb hero-orb-1" />
+      <span aria-hidden className="hero-orb hero-orb-2" />
+      <span aria-hidden className="hero-orb hero-orb-3" />
+
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.35]"
+        className="pointer-events-none absolute inset-0 opacity-40"
         style={{
           backgroundImage:
-            "radial-gradient(55% 50% at 80% 0%, rgba(216,190,134,0.35) 0%, transparent 60%), radial-gradient(50% 50% at 0% 100%, rgba(93,128,168,0.4) 0%, transparent 60%)",
+            "radial-gradient(60% 50% at 50% 0%, rgba(255,255,255,0.04) 0%, transparent 60%)",
         }}
       />
       <div
@@ -19,9 +65,11 @@ export function Hero() {
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent"
       />
 
+      <Stamp />
+
       <div className="container-wide relative py-24 sm:py-28 lg:py-36">
         <div className="mx-auto max-w-3xl text-center" data-reveal>
-          <span className="eyebrow text-gold-400 border-gold-400/40 bg-gold-400/10">
+          <span className="eyebrow border-gold-400/40 bg-gold-400/10 text-gold-400">
             Proposta confidencial · {PROPOSAL.issuedAt}
           </span>
 

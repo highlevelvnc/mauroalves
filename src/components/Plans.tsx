@@ -49,12 +49,24 @@ export function Plans() {
               key={plan.id}
               data-reveal
               data-reveal-delay={`${i * 80}ms`}
-              className={`relative flex h-full flex-col rounded-[1.75rem] border p-6 shadow-card sm:p-7 ${
+              className={`plan-card ${
+                plan.highlight ? "is-highlight" : ""
+              } relative flex h-full flex-col rounded-[1.75rem] border p-6 shadow-card sm:p-7 ${
                 plan.highlight
                   ? "border-gold-500/60 bg-gradient-to-br from-navy-700/85 via-navy-800/85 to-navy-900/85 backdrop-blur"
                   : "border-ink-100/15 bg-navy-900/40 backdrop-blur"
               }`}
             >
+              {plan.highlight ? (
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 rounded-[1.75rem] opacity-0 transition duration-500 group-hover:opacity-100"
+                  style={{
+                    background:
+                      "radial-gradient(60% 60% at 50% 0%, rgba(216,190,134,0.18), transparent 70%)",
+                  }}
+                />
+              ) : null}
               {plan.badge ? (
                 <span
                   className={`absolute -top-3 right-6 inline-flex items-center rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] shadow-soft ${
