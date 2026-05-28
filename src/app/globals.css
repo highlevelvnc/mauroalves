@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    overflow-x: clip;
+  }
+
+  body {
+    @apply bg-ink-50 text-navy-900 font-body antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    background-color: rgba(200, 168, 120, 0.35);
+    color: #060f21;
+  }
+}
+
+@layer utilities {
+  .container-prose {
+    @apply mx-auto w-full max-w-6xl px-6 sm:px-8;
+  }
+
+  .container-wide {
+    @apply mx-auto w-full max-w-7xl px-6 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-gold-500/40 bg-gold-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-gold-700;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-navy-900 px-6 py-3 text-sm font-semibold text-ink-50 shadow-soft transition hover:bg-navy-800 hover:shadow-card focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2 focus:ring-offset-ink-50;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-grad px-6 py-3 text-sm font-semibold text-navy-950 shadow-card transition hover:brightness-105 focus:outline-none focus:ring-2 focus:ring-navy-900 focus:ring-offset-2 focus:ring-offset-ink-50;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-navy-200 bg-white/60 px-6 py-3 text-sm font-semibold text-navy-900 transition hover:border-navy-300 hover:bg-white;
+  }
+
+  .card {
+    @apply rounded-3xl border border-navy-100 bg-white p-8 shadow-soft;
+  }
+
+  .hairline {
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      rgba(11, 24, 48, 0.15),
+      transparent
+    );
+    height: 1px;
+  }
+}
+
+/* Reveal pattern — visible-by-default, hidden only when marked at runtime */
+[data-revealed="false"] {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+}
+[data-revealed="false"][data-reveal="left"] {
+  transform: translate3d(-40px, 0, 0);
+}
+[data-revealed="false"][data-reveal="right"] {
+  transform: translate3d(40px, 0, 0);
+}
+[data-revealed="false"][data-reveal="scale"] {
+  transform: scale(0.96);
+}
+[data-reveal] {
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-revealed="false"] {
+    opacity: 1;
+    transform: none;
+  }
+  [data-reveal] {
+    transition: none;
+  }
+}
+
+/* Floating WhatsApp tooltip */
+.wa-tooltip {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.wa-tooltip[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
