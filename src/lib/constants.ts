@@ -224,21 +224,25 @@ export const TRAFFIC_BLOCKS = [
 
 export const EXAMPLES = [
   {
+    code: "DXv1ypAiPAw",
     url: "https://www.instagram.com/reel/DXv1ypAiPAw/?igsh=MTVzdnFyZ2dqM3M3bg==",
     label: "Reel · cliente real",
     description: "Apresentação de imóvel em formato curto, com ritmo e CTA claro.",
   },
   {
+    code: "DWQti_-jQGn",
     url: "https://www.instagram.com/reel/DWQti_-jQGn/?igsh=ZnNsOGY5NzRzaWNq",
     label: "Reel · cliente real",
     description: "Marca pessoal do consultor como protagonista, próximo do cliente.",
   },
   {
+    code: "DTxwwJ4gobX",
     url: "https://www.instagram.com/reel/DTxwwJ4gobX/?igsh=d3RvOGE2cXI5bHV5",
     label: "Reel · cliente real",
     description: "Tour de imóvel com planos aéreos a destacar a luz natural.",
   },
   {
+    code: "DVbxH9pDUmf",
     url: "https://www.instagram.com/reel/DVbxH9pDUmf/?igsh=NzY5cmZzdzhud3dr",
     label: "Reel · cliente real",
     description: "Conteúdo educativo curto a posicionar o consultor como referência.",
