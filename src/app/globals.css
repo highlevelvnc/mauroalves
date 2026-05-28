@@ -249,6 +249,57 @@
   height: 1px;
 }
 
+/* Animated gold gradient text */
+.gold-shift {
+  background-image: linear-gradient(
+    120deg,
+    #d8be86 0%,
+    #f0deb2 25%,
+    #a9885a 50%,
+    #d8be86 75%,
+    #f0deb2 100%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gold-shift 9s ease-in-out infinite;
+}
+@keyframes gold-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Decorative oversized numerals behind cards */
+.bg-numeral {
+  position: absolute;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 11rem;
+  line-height: 0.8;
+  color: rgba(11, 24, 48, 0.045);
+  pointer-events: none;
+  user-select: none;
+  bottom: -1.5rem;
+  right: -0.5rem;
+}
+
+/* Process timeline */
+.timeline-rail {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(216, 190, 134, 0.7) 0%,
+    rgba(11, 24, 48, 0.2) 35%,
+    rgba(11, 24, 48, 0.08) 100%
+  );
+}
+.timeline-dot {
+  box-shadow:
+    0 0 0 6px rgba(243, 243, 239, 1),
+    0 0 0 7px rgba(216, 190, 134, 0.4),
+    0 0 20px rgba(216, 190, 134, 0.55);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .marquee,
   .hero-orb,

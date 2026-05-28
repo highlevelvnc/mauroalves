@@ -154,13 +154,13 @@ export const ADDONS: Addon[] = [
   },
   {
     title: "Vídeo de marca pessoal",
-    price: "1.490€",
+    price: "690€",
     cadence: "valor único",
     description: "Vídeo manifesto entre 60 e 90 segundos para posicionar o Mauro no mercado.",
   },
   {
     title: "Landing page de imóvel",
-    price: "300€",
+    price: "250€",
     cadence: "por imóvel",
     description: "Página dedicada com galeria, vídeo, mapa e formulário ligado ao WhatsApp.",
   },

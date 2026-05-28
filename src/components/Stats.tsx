@@ -1,3 +1,5 @@
+import { CountUp } from "@/components/CountUp";
+
 const STATS = [
   {
     value: "4",
@@ -48,7 +50,7 @@ export function Stats() {
               ) : null}
               <dt className="font-display text-5xl font-bold leading-none text-navy-900 sm:text-6xl">
                 <span className="bg-gold-grad bg-clip-text text-transparent">
-                  {stat.value}
+                  <CountUp value={stat.value} />
                 </span>
               </dt>
               <dd className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-navy-900">

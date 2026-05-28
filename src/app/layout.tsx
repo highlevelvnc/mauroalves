@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Manrope, Work_Sans } from "next/font/google";
 import "./globals.css";
 import { RevealProvider } from "@/components/RevealProvider";
+import { ScrollProgress } from "@/components/ScrollProgress";
 import { WhatsAppFAB } from "@/components/WhatsAppFAB";
 import { CLIENT, AGENCY } from "@/lib/constants";
 
@@ -46,6 +47,7 @@ export default function RootLayout({
   return (
     <html lang="pt-PT" className={`${display.variable} ${body.variable}`}>
       <body>
+        <ScrollProgress />
         <RevealProvider>{children}</RevealProvider>
         <WhatsAppFAB />
       </body>

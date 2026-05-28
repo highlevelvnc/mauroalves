@@ -75,10 +75,8 @@ export function Hero() {
 
           <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
             Conteúdo audiovisual e tráfego pago para o{" "}
-            <span className="bg-gold-grad bg-clip-text text-transparent">
-              {CLIENT.name}
-            </span>{" "}
-            vender mais imóveis.
+            <span className="gold-shift">{CLIENT.name}</span> vender mais
+            imóveis.
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-100/85">
